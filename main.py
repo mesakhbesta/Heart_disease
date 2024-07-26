@@ -61,8 +61,7 @@ st.set_page_config(page_title="Vital Guard", page_icon="🛡️")
 
 # Header and image
 st.write("""
-### Vital Guard 🛡️ : 
-### Prediksi Penyakit Jantung
+### Vital Guard 🛡️ : Prediksi Penyakit Jantung
 
 Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
 
