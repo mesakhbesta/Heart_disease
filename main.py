@@ -2,12 +2,10 @@ import streamlit as st
 import pandas as pd
 import pickle
 from sklearn.preprocessing import StandardScaler
+from joblib import load
 
-with open("best_classifier.pkl", "rb") as file:
-    model = pickle.load(file)
-
-with open("scaler.pkl", "rb") as file:
-    scaler = pickle.load(file)
+model = load('best_classifier.joblib')
+scaler = load('scaler.joblib')
 
 THRESHOLD = 0.45430534517214627
 
