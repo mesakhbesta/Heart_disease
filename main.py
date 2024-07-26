@@ -59,19 +59,16 @@ def heart():
 
 st.set_page_config(page_title="Vital Guard", page_icon="🛡️")
 
-# Layout with columns for image and header
-col1, col2 = st.columns([1, 2])
-with col1:
-    st.image('download.jpeg', width=200)
+# Header and image
+st.write("""
+# Vital Guard 🛡️ : Prediksi Penyakit Jantung
 
-with col2:
-    st.write("""
-    # Vital Guard 🛡️ : Prediksi Penyakit Jantung
-    
-    Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
-    
-    Data diperoleh dari [Heart Disease dataset](https://archive.ics.uci.edu/dataset/45/heart+disease) oleh UCIML.
-    """)
+Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
+
+Data diperoleh dari [Heart Disease dataset](https://archive.ics.uci.edu/dataset/45/heart+disease) oleh UCIML.
+""")
+
+st.image('download.jpeg', width=250)
 
 st.markdown(
     """
