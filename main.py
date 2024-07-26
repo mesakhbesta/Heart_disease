@@ -50,7 +50,8 @@ def user_input_features():
 
 def heart():
     st.write("""
-    # Vital Guard 🛡️ : Prediksi Penyakit Jantung
+    # Vital Guard 🛡️ : 
+    # Prediksi Penyakit Jantung
     
     Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
     
@@ -174,7 +175,7 @@ if st.button('Prediksi'):
 st.markdown(
     """
     <div class="footer">
-        Selalu jaga kesehatan jantung Anda
+        Jaga Kesehatan
     </div>
     """,
     unsafe_allow_html=True
