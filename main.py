@@ -48,13 +48,7 @@ def user_input_features():
     return features
 
 def heart():
-    st.write("""
-    # Vital Guard : Prediksi Penyakit Jantung
-    
-    Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
-    
-    Data diperoleh dari [Heart Disease dataset](https://archive.ics.uci.edu/dataset/45/heart+disease) oleh UCIML.
-    """)
+st.set_page_config(page_title="Vital Guard", page_icon="🛡️")
 
 st.markdown(
     """
@@ -97,7 +91,7 @@ st.markdown(
 )
 
 st.write("""
-# Aplikasi Prediksi Penyakit Jantung
+# Vital Guard 🛡️: Aplikasi Prediksi Penyakit Jantung
 
 Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
 
