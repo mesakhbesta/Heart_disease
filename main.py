@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
-import pickle
-from sklearn.preprocessing import StandardScaler
 from joblib import load
 
+# Muat model dan scaler
 model = load('best_classifier.joblib')
 scaler = load('scaler.joblib')
 
@@ -54,6 +53,7 @@ def heart():
     Data diperoleh dari [Heart Disease dataset](https://archive.ics.uci.edu/dataset/45/heart+disease) oleh UCIML.
     """)
 
+# Desain dan gaya CSS
 st.markdown(
     """
     <style>
@@ -164,7 +164,7 @@ if st.button('Prediksi'):
         st.write('Tidak Terdeteksi Penyakit Jantung')
         st.subheader('Probabilitas Prediksi')
         st.write(f"Probabilitas: {1 - prediction_proba[0][1]:.2f}")
-        
+
 st.markdown(
     """
     <div class="footer">
