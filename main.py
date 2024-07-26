@@ -59,10 +59,10 @@ def heart():
 
 st.set_page_config(page_title="Vital Guard", page_icon="🛡️")
 
-# Use columns for layout
+# Layout with columns for image and header
 col1, col2 = st.columns([1, 2])
 with col1:
-    st.image('download.jpeg', width=250) 
+    st.image('download.jpeg', width=200)
 
 with col2:
     st.write("""
@@ -177,7 +177,7 @@ if st.button('Prediksi'):
 st.markdown(
     """
     <div class="footer">
-        Jaga kesehatan
+        Selalu jaga kesehatan jantung Anda
     </div>
     """,
     unsafe_allow_html=True
