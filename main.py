@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from sklearn.preprocessing import StandardScaler
 
+# Load model and scaler
 with open("best_classifier.pkl", "rb") as file:
     model = pickle.load(file)
 
@@ -58,6 +59,20 @@ def heart():
 
 st.set_page_config(page_title="Vital Guard", page_icon="🛡️")
 
+# Use columns for layout
+col1, col2 = st.columns([1, 2])
+with col1:
+    st.image('download.jpeg', width=250) 
+
+with col2:
+    st.write("""
+    # Vital Guard 🛡️ : Prediksi Penyakit Jantung
+    
+    Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
+    
+    Data diperoleh dari [Heart Disease dataset](https://archive.ics.uci.edu/dataset/45/heart+disease) oleh UCIML.
+    """)
+
 st.markdown(
     """
     <style>
@@ -98,8 +113,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.image('download.jpeg', width=250) 
-
 with st.expander("Deskripsi Fitur", expanded=False):
     st.markdown("""
     1. **Jenis Nyeri Dada (<span style='color: #4CAF50;'>cp</span>)**:
@@ -138,7 +151,7 @@ with st.expander("Deskripsi Fitur", expanded=False):
     9. **Usia (<span style='color: #4CAF50;'>age</span>)**:
        - Usia pasien dalam tahun.
     """, unsafe_allow_html=True)
- 
+
 df = user_input_features()
 
 st.subheader('Fitur Input Pengguna')
@@ -160,11 +173,11 @@ if st.button('Prediksi'):
         st.write('Tidak Terdeteksi Penyakit Jantung')
         st.subheader('Probabilitas Prediksi')
         st.write(f"Probabilitas: {1 - prediction_proba[0][1]:.2f}")
-        
+
 st.markdown(
     """
     <div class="footer">
-        Selalu jaga kesehatan jantung Anda
+        Jaga kesehatan
     </div>
     """,
     unsafe_allow_html=True
