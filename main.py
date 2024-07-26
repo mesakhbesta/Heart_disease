@@ -49,7 +49,7 @@ def user_input_features():
 
 def heart():
     st.write("""
-    # Aplikasi Prediksi Penyakit Jantung
+    # Vital Guard : Prediksi Penyakit Jantung
     
     Aplikasi ini memprediksi **Penyakit Jantung** berdasarkan data pengguna.
     
